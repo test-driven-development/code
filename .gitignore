@@ -7,3 +7,5 @@
 !/.idea/scopes/Code.xml
 build/
 out/
+
+.DS_Store
