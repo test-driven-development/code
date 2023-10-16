@@ -9,7 +9,7 @@ object Legs {
     return Optional.ofNullable(longestLegOver(legs, duration))
   }
 
-  private fun longestLegOver(legs: List<Leg>, duration: Duration): Leg? {
+  fun longestLegOver(legs: List<Leg>, duration: Duration): Leg? {
     var result: Leg? = null
     for (leg in legs) {
       if (isLongerThan(leg, duration))
