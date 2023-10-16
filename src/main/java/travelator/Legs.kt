@@ -9,9 +9,9 @@ object Legs {
     var result: Leg? = null
     for (leg in legs) {
       if (isLongerThan(leg, duration))
-          if (result == null || isLongerThan(leg, result.plannedDuration)) {
-            result = leg
-          }
+        if (result == null || isLongerThan(leg, result.plannedDuration)) {
+          result = leg
+        }
     }
     return Optional.ofNullable(result)
   }

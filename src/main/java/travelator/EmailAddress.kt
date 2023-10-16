@@ -1,7 +1,6 @@
 package travelator
 
 data class EmailAddress(val localPart: String, val domain: String) {
-
   override fun toString(): String { // <1>
     return "$localPart@$domain"
   }
