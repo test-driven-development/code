@@ -10,6 +10,7 @@ import java.util.concurrent.ThreadLocalRandom
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import travelator.Legs.findLongestLegOver
+import travelator.Legs.longestLegOver
 
 class LongestLegOverTests {
   private val legs =
@@ -26,8 +27,18 @@ class LongestLegOverTests {
   }
 
   @Test
+  fun `is absent when no legs`() {
+    Assertions.assertNull(longestLegOver(emptyList(), Duration.ZERO))
+  }
+
+  @Test
   fun is_absent_when_no_legs_long_enough() {
     Assertions.assertEquals(Optional.empty<Any>(), findLongestLegOver(legs, oneDay))
+  }
+
+  @Test
+  fun `is absent when no legs long enough`() {
+    Assertions.assertNull(longestLegOver(legs, oneDay))
   }
 
   @Test
