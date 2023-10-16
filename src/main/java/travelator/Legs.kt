@@ -4,11 +4,6 @@ import java.time.Duration
 import java.util.*
 
 object Legs {
-  @JvmStatic
-  fun findLongestLegOver(legs: List<Leg>, duration: Duration): Optional<Leg> {
-    return Optional.ofNullable(longestLegOver(legs, duration))
-  }
-
   fun longestLegOver(legs: List<Leg>, duration: Duration): Leg? {
     var result: Leg? = null
     for (leg in legs) {
