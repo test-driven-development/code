@@ -6,8 +6,7 @@ import java.util.*
 object Legs {
   @JvmStatic
   fun findLongestLegOver(legs: List<Leg>, duration: Duration): Optional<Leg> {
-    var result: Leg? = longestLegOver(legs, duration)
-    return Optional.ofNullable(result)
+    return Optional.ofNullable(longestLegOver(legs, duration))
   }
 
   private fun longestLegOver(legs: List<Leg>, duration: Duration): Leg? {
