@@ -50,10 +50,26 @@ class LongestLegOverTests {
   }
 
   @Test
+  fun `is longest leg when one match`() {
+    Assertions.assertEquals(
+      "one day",
+        longestLegOver(legs, oneDay.minusMillis(1))!!.description
+    )
+  }
+
+  @Test
   fun is_longest_leg_when_more_than_one_match() {
     Assertions.assertEquals(
       "one day",
       findLongestLegOver(legs, Duration.ofMinutes(59)).orElseThrow().description
+    )
+  }
+
+  @Test
+  fun `is longest leg when more than one match`() {
+    Assertions.assertEquals(
+      "one day",
+        longestLegOver(legs, Duration.ofMinutes(59))?.description
     )
   }
 
